@@ -1,0 +1,19 @@
+<suite name="SauceDemoTestSuite">
+    <test name="Purchase Product Test">
+        <classes>
+            <class name="org.example.PurchaseProductTest" />
+        </classes>
+    </test>
+
+    <test name="Remove from Cart Test">
+        <classes>
+            <class name="org.example.RemoveFromCartTest" />
+        </classes>
+    </test>
+
+    <test name="Logout Test">
+        <classes>
+            <class name="org.example.LogoutTest" />
+        </classes>
+    </test>
+</suite>
