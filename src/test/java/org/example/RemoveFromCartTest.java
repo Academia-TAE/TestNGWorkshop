@@ -1,35 +1,45 @@
 package org.example;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
 
 public class RemoveFromCartTest {
+    @BeforeSuite
+    public void setup() {
+        System.out.println("Configurando la suite de pruebas...");
+
+    }
 
     @BeforeClass
-    public void setup() {
-        // Perform setup steps, e.g., launching the browser, navigating to the website, and login (if needed).
+    public void beforeClass() {
+        System.out.println("Configurando la clase de prueba para eliminar elementos del carrito...");
     }
 
     @BeforeMethod
     public void beforeTest() {
-        // Initialize the state for this test, e.g., adding items to the cart.
+        System.out.println("Configurando el escenario para eliminar elementos del carrito...");
     }
 
     @Test
     public void testRemoveFromCart() {
-        // Perform actions to remove items from the cart and verify the cart is empty.
+        System.out.println("Paso 1: Agregar 3 elementos diferentes al carrito de compras.");
+        System.out.println("Paso 2: Ir a la página del carrito.");
+        System.out.println("Paso 3: Eliminar los elementos del carrito.");
+        System.out.println("Paso 4: Verificar que el carrito de compras esté vacío.");
     }
+
 
     @AfterMethod
     public void afterTest() {
-        // Cleanup or reset state after the test, e.g., verifying the cart is empty.
+        System.out.println("Limpiando después de la prueba de eliminar elementos del carrito...");
     }
 
     @AfterClass
     public void teardown() {
-        // Perform teardown, e.g., closing the browser.
+        System.out.println("Realizando acciones posteriores a la prueba de eliminar elementos del carrito...");
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("Realizando acciones posteriores a la suite de pruebas...");
     }
 }

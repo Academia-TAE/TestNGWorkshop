@@ -1,35 +1,41 @@
 package org.example;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
 
 public class LogoutTest {
+    @BeforeSuite
+    public void beforeSuite() {
+        System.out.println("Configurando la suite de pruebas...");
+    }
 
     @BeforeClass
-    public void setup() {
-        // Perform setup steps, e.g., launching the browser, navigating to the website, and login.
+    public void beforeClass() {
+        System.out.println("Configurando la clase de prueba para cerrar sesión...");
     }
 
     @BeforeMethod
-    public void beforeTest() {
-        // Initialize the state for this test, e.g., making sure the user is logged in.
+    public void beforeMethod() {
+        System.out.println("Configurando el escenario para cerrar sesión...");
     }
 
     @Test
-    public void testLogout() {
-        // Perform logout and verify redirection to the login page.
+    public void afterLogOut() {
+        System.out.println("Paso 1: Intentar cerrar sesión.");
+        System.out.println("Paso 2: Verificar que se redirige correctamente a la página de inicio de sesión.");
     }
 
     @AfterMethod
-    public void afterTest() {
-        // Cleanup or reset state after the test, e.g., verifying the user is logged out.
+    public void afterMethod() {
+        System.out.println("Limpiando después de la prueba de cerrar sesión...");
     }
 
     @AfterClass
-    public void teardown() {
-        // Perform teardown, e.g., closing the browser.
+    public void afterClass() {
+        System.out.println("Realizando acciones posteriores a la prueba de cerrar sesión...");
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        System.out.println("Realizando acciones posteriores a la suite de pruebas...");
     }
 }
