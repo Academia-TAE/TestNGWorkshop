@@ -1,44 +1,48 @@
 package org.example;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 import org.testng.annotations.*;
 
 public class PurchaseProductTest {
+    private static final Logger logger = Logger.getLogger(PurchaseProductTest.class.getName());
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("Configurando la suite de pruebas...");
+        logger.log(Level.INFO, "Configurando la suite de pruebas...");
     }
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("Configurando la clase de prueba para la compra de un producto...");
+        logger.log(Level.INFO, "Configurando la clase de prueba para la compra de un producto...");
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        System.out.println("Configurando el escenario para la compra de un producto...");
+        logger.log(Level.INFO, "Configurando el escenario para la compra de un producto...");
     }
 
     @Test
     public void testPurchaseProduct() {
-        System.out.println("Paso 1: Seleccionar un producto al azar.");
-        System.out.println("Paso 2: Agregar el producto al carrito.");
-        System.out.println("Paso 3: Ingresar los datos personales.");
-        System.out.println("Paso 4: Verificar que se llega a la página de 'Gracias por su compra'.");
+        logger.log(Level.INFO, "Paso 1: Seleccionar un producto al azar.");
+        logger.log(Level.INFO, "Paso 2: Agregar el producto al carrito.");
+        logger.log(Level.INFO, "Paso 3: Ingresar los datos personales.");
+        logger.log(Level.INFO, "Paso 4: Verificar que se llega a la página de 'Gracias por su compra'.");
     }
 
     @AfterMethod
     public void afterMethod() {
-        System.out.println("Limpiando después de la prueba de compra de un producto...");
+        logger.log(Level.INFO, "Limpiando después de la prueba de compra de un producto...");
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("Realizando acciones posteriores a la prueba de compra de un producto...");
+        logger.log(Level.INFO, "Realizando acciones posteriores a la prueba de compra de un producto...");
     }
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("Realizando acciones posteriores a la suite de pruebas...");
+        logger.log(Level.INFO, "Realizando acciones posteriores a la suite de pruebas...");
     }
 }
